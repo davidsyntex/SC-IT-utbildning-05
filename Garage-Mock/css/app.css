@@ -1,0 +1,355 @@
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    background: #f9f9f9;
+    color: #141823;
+    margin: 0;
+    padding: 0;
+    line-height: 1.25;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2
+{
+    margin: 1.75rem 0 0.25rem 0;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+a:link, a:active, a:visited
+{
+    color: #2dafff;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #141823;
+}
+
+.app-container
+{
+    flex: 1;
+}
+
+/* HEADER
+*/
+.app-header
+{
+    background-color: #141823;
+    color: #eee;
+    padding: 0;
+}
+
+.app-header nav
+{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.app-header nav ul
+{
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+}
+
+.app-header a:link, .app-header a:visited, .app-header a:active
+{
+    color: #eee;
+    text-decoration: none;
+}
+
+.app-header .logo
+{
+    transition: all 0.8s;
+}
+
+.app-header .logo > h1
+{
+    font-family: 'Oleo Script', cursive;
+    line-height: 1.25;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.app-header nav ul li a
+{
+    padding: 0 1rem;
+    display: block;
+    text-decoration: none;
+    line-height: 2.5;
+    transition: all 0.8s;
+}
+
+.app-header li a:hover
+{
+    background-color: #363636;
+}
+
+.app-header .logo:hover
+{
+    color: #2dafff;
+    background-color: #141823;
+}
+
+/* BODY
+*/
+
+.app-body
+{
+    /*background-color: #b71c34;*/
+    width: 80%;
+    margin: 1rem auto 0 auto;
+}
+
+.hero
+{
+    padding: 3rem;
+    margin-bottom: 2rem;
+    background-color: #dddddd;
+}
+
+.hero h2
+{
+    font-size: 3rem;
+}
+
+.hero p
+{
+    font-size: 1.5rem;
+}
+
+.app-body-gallery
+{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.app-body-gallery .app-body-gallery-item
+{
+    width: 33.3%;
+    height: 125px;
+    height: 25vh;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+    transition: 0.8s opacity;
+}
+
+.app-body-gallery .app-body-gallery-item
+{ opacity: 0.3 }
+
+.app-body-gallery .app-body-gallery-item:hover
+{ opacity: 1 }
+
+.app-body-news
+{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.app-body-news-item
+{
+    width: 49%;
+    background-color: #f1f1f1;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    border-bottom: 2px #2dafff solid;
+}
+
+.app-body-news-item h3
+{
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.app-body-news-item p:first-of-type
+{
+    margin-top: 0;
+}
+
+/* FOOTER
+ */
+.app-footer
+{
+    background-color: #2dafff;
+    color: #f9f9f9;
+    box-sizing: border-box;
+    width: 80%;
+    margin: auto auto 0 auto;
+}
+
+.app-footer p
+{
+    padding: 0.5rem 2rem;
+    font-size: 0.8rem;
+}
+
+.app-footer a:link, .app-footer a:active, .app-footer a:visited
+{
+    color: #141823;
+    text-decoration: none;
+}
+
+.app-footer a:hover
+{
+    color: #fff;
+}
+
+.clearfix:after
+{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+/* UTILS
+*/
+
+/* close commented backslash hack */
+.bold
+{
+    font-weight: bold;
+}
+
+/* MEDIA QUERIES
+*/
+
+@media all and (max-width: 50rem)
+{
+    .app-body-gallery .app-body-gallery-item
+    {
+        width: 50%;
+    }
+
+    .app-body-news-item
+    {
+        width: 100%;
+    }
+
+    .app-header nav ul
+    {
+        justify-content: space-around;
+    }
+
+    .app-header .logo > h1
+    {
+        justify-content: flex-start;
+    }
+}
+
+@media all and (max-width: 37.5rem)
+{
+    .app-body-gallery .app-body-gallery-item
+    {
+        width: 100%;
+    }
+
+    .app-body-news-item
+    {
+        width: 100%;
+        padding: 0.5rem 1rem;
+    }
+
+    .app-header nav, .app-body, .app-footer
+    {
+        width: 100%;
+    }
+
+    .app-header nav ul
+    {
+        flex-flow: column wrap;
+        padding: 0;
+    }
+
+    .app-header nav ul li a
+    {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .app-header nav ul li:last-of-type a
+    {
+        border-bottom: none;
+    }
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr { border: 1px solid #ccc; }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+}
+
+.app-body-full-width
+{
+    width: 100%;
+}
+
+.app-body table
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.app-body table thead
+{
+    text-align: left;
+}
+
+.app-body table tr td, .app-body table tr th
+{
+    padding: 0.5rem 0.25rem;
+}
+
+.app-body table tr:nth-child(odd) td
+{
+    background-color: #eeeeee;
+}

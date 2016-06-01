@@ -1,0 +1,166 @@
+body
+{
+    background: url("../img/bbb-splash.png") #f9f9f9 no-repeat;
+    background-size: cover;
+    color: #141823;
+    margin: 0;
+    padding: 0;
+    line-height: 1.25;
+}
+
+footer
+{
+    padding: 1rem;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+a:link, a:visited, a:active{
+    color: #64101c;
+    text-decoration: none;
+}
+a:hover{
+    color: #141823;
+    text-decoration: underline;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+.app-logo
+{
+    background-color: #64101c;
+    padding: 0.5rem 2rem;
+}
+
+.app-logo > h1
+{
+    margin: 0;
+    font-size: 2.5rem;
+    color: #fff0f0;
+    letter-spacing: 0.3rem;
+}
+.app-logo > h1 > a:visited, .app-logo > h1 > a:active, .app-logo > h1 > a:link{
+    color: #fff0f0;
+    text-decoration: none;
+}
+.app-logo > h1 > a:hover{
+    color: #A59B9B;
+    text-decoration: none;
+}
+
+nav
+{
+    margin: 0;
+    padding: 0.5rem 2rem;
+    background-color: #64101c;
+}
+
+nav > ul
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+nav > ul > li{
+    float:left;
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+nav > ul > li > a{
+    padding: 0.35rem 0.5rem;
+}
+nav > ul > li > a:link, nav > ul > li > a:visited, nav > ul > li > a:active{
+    color: #dccfcf;
+    text-decoration: none;
+}
+
+nav > ul > li > a:hover{
+    color: #A59B9B;
+    background-color: #b71c34;
+    text-decoration: none;
+}
+
+nav > ul > li:last-of-type
+{
+    float: right;
+    margin-right: 0;
+}
+
+.movie-title
+{
+    color: #2dafff;
+}
+
+.app-container
+{
+    width: 60%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.content
+{
+    padding: 0.5rem;
+}
+
+.poster
+{
+    width: 25%;
+    box-shadow: 0 0 2rem -0.5rem rgba(0, 0, 0, 0.75);
+    float: left;
+    transition: all 0.5s ease;
+    display: inline;
+}
+
+.poster:hover{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.information > div
+{
+    float: left;
+    width: 70%;
+    margin-left: 5%;
+}
+
+.information > div p:first-of-type
+{
+    margin-top: 0;
+}
+
+.clearfix:after
+{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clearfix
+{ display: inline-block; }
+
+/* start commented backslash hack \*/
+* html .clearfix
+{ height: 1%; }
+
+.clearfix
+{ display: block; }
+
+/* close commented backslash hack */
+.bold
+{
+    font-weight: bold;
+}
