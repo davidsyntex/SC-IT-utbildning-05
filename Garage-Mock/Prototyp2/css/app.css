@@ -6,7 +6,8 @@ html, body
 body
 {
     background: #f9f9f9;
-    color: #141823;
+    /*color: #141823;*/
+    color: #eee;
     display: flex;
     flex-direction: column;
     font-family: 'Source Sans Pro', sans-serif;
@@ -40,26 +41,28 @@ a:hover
 
 .app-fullscreen-image
 {
+    align-items: center;
+    background-attachment: fixed;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
+    display: flex;
     height: 100vh;
-    margin: 0;
-        display: flex;
-    align-items: center;
     justify-content: center;
+    margin: 0;
+    width: 100%;
 }
+
 .app-fullscreen-image > h1
 {
-    width: 100%;
-    font-size: 16rem;
-    text-align: center;
+    color: #eee;
     font-family: 'Oleo Script', cursive;
+    font-size: 20vw;
     font-weight: 400;
     line-height: 1.25;
-    color: #eee;
-
+    text-align: center;
+    text-shadow: 0.3rem 0.3rem 0.5rem #141823;
+    width: 100%;
 }
 
 /* HEADER
@@ -69,13 +72,16 @@ a:hover
 {
     background-color: #141823;
     color: #eee;
+    overflow: hidden;
     padding: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
 }
 
 .app-header nav
 {
     margin: 0 auto;
-    width: 80%;
 }
 
 .app-header nav ul
@@ -134,84 +140,86 @@ a:hover
 
 .app-body
 {
-    margin: 1rem auto 0 auto;
+    margin: 0;
     /*background-color: #b71c34;*/
+    width: 100%;
+}
+
+.app-body-full-width
+{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 !important;
+    padding: 3rem 0;
+    width: 100%;
+}
+
+.app-body-content
+{
+    margin: 0 auto;
+    max-width: 130rem;
     width: 80%;
-}
-
-.hero
-{
-    background-color: #dddddd;
-    margin-bottom: 2rem;
-    padding: 3rem;
-}
-
-.hero h2
-{
-    font-size: 3rem;
 }
 
 .hero p
 {
+    color: #eee;
     font-size: 1.5rem;
+    text-align: center;
 }
 
-.app-body-gallery
+.app-body-full-width h2
 {
-    align-items: center;
-    display: flex;
-    flex-flow: row wrap;
+    color: #f1f1f1;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    text-shadow: 0.1rem 0.1rem 0 black;
+    text-transform: uppercase;
 }
 
-.app-body-gallery .app-body-gallery-item
+.app-body-full-width p
 {
-    background-position: center center;
-    background-size: cover;
-    height: 125px;
-    height: 25vh;
-    overflow: hidden;
-    transition: 0.8s opacity;
-    width: 33.3%;
+    color: #eeeeee;
 }
 
-.app-body-gallery .app-body-gallery-item
+.hero
 {
-    opacity: 0.3
+    background-color: #2dafff;
 }
 
-.app-body-gallery .app-body-gallery-item:hover
+.about
 {
-    opacity: 1
+    background-color: #E35F3D;
 }
 
-.app-body-news
+.contact
 {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+    background-color: #138D82;
+    text-align: center;
 }
 
-.app-body-news-item
+.contact h3
 {
-    background-color: #f1f1f1;
-    border-bottom: 2px #2dafff solid;
-    box-sizing: border-box;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    width: 49%;
+    color: #eee;
+    margin: 2rem 0 0.25rem 0;
+    text-transform: uppercase;
 }
 
-.app-body-news-item h3
+.contact p
 {
-    font-size: 1.3rem;
-    font-weight: 400;
-    margin: 0;
+    margin: 0.25rem 0;
 }
 
-.app-body-news-item p:first-of-type
+.vehicles
 {
-    margin-top: 0;
+    background-color: #3D162F;
+}
+
+.vehicles h2
+{
+    margin-bottom: 2rem;
 }
 
 /* FOOTER
@@ -219,22 +227,21 @@ a:hover
 
 .app-footer
 {
-    background-color: #2dafff;
+    background-color: #A0735C;
     box-sizing: border-box;
     color: #f9f9f9;
-    margin: auto auto 0 auto;
-    width: 80%;
+    width: 100%;
 }
 
 .app-footer p
 {
-    font-size: 0.8rem;
-    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    padding: 4rem 2rem 4rem 2rem;
 }
 
 .app-footer a:link, .app-footer a:active, .app-footer a:visited
 {
-    color: #141823;
+    color: #441834;
     text-decoration: none;
 }
 
@@ -244,10 +251,7 @@ a:hover
 }
 
 
-.app-body-full-width
-{
-    width: 100%;
-}
+
 
 .app-body table
 {
@@ -272,6 +276,8 @@ a:hover
 
 .app-body-vehicles
 {
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
     align-items: flex-start;
     display: flex;
     flex-flow: row wrap;
@@ -280,24 +286,59 @@ a:hover
 
 .app-body-vehicles-item
 {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 24.7%;
-    margin-bottom: 1rem;
-    background-color: #eeeeee;
+    width: 25%;
 }
 
-.app-body-vehicles-item dt
+.app-body-vehicles-item:nth-child(4n-3)
+{
+    background-color: #852F65;
+}
+
+.app-body-vehicles-item:nth-child(4n-2)
+{
+    background-color: #441834;
+    
+}
+
+.app-body-vehicles-item:nth-child(4n-1)
+{
+    background-color: #63234C;
+}
+
+.app-body-vehicles-item:nth-child(4n)
+{
+    
+    background-color: #75295A;
+}
+
+.app-body-vehicles-item h3
 {
     font-weight: bold;
     overflow-wrap: break-word;
+    padding: 0 0.5rem;
+    margin: 0.25rem 0 0.125rem 0;
 }
 
-.app-body-vehicles-item dd
+.app-body-vehicles-item div:first-of-type
+{
+    padding-top: 1rem;
+}
+
+.app-body-vehicles-item p
 {
     margin: 0;
-    padding: 0 0 0.5rem 0;
+    padding: 0 0.5rem 0.5rem 0.5rem;
     word-break: break-all;
 }
+
+.app-body-vehicles-item div:last-of-type
+{
+    padding-bottom: 1rem;
+}
+
 
 .app-body-vehicles-item-image
 {
@@ -359,7 +400,7 @@ a:hover
 
     .app-body-vehicles-item
     {
-        width: 49.7%;
+        width: 50%;
     }
 }
 
@@ -369,6 +410,7 @@ a:hover
     {
         padding: 0 0.5rem;
     }
+
     .app-body-gallery .app-body-gallery-item
     {
         width: 100%;
@@ -436,6 +478,7 @@ a:hover
 
     td:before
     {
+        font-weight: bold;
         left: 6px;
         padding-right: 10px;
         /* Now like a table header */
@@ -444,7 +487,6 @@ a:hover
         top: 6px;
         white-space: nowrap;
         width: 45%;
-        font-weight: bold;
     }
 
     td:nth-of-type(1):before
@@ -471,12 +513,13 @@ a:hover
     {
         width: 100%;
     }
+
     .app-body-vehicles-item dl
     {
-        padding: 0 0.5rem;
-        display: flex;
-        flex: row wrap;
         align-items: flex-start;
+        display: flex;
+        flex-flow: row wrap;
         justify-content: space-between;
+        padding: 0 0.5rem;
     }
 }
