@@ -3,3 +3,9 @@
 *.iml
 *.iws
 help/index.html
+help/style.css
+Web.config
+.vs/SC-IT-utbildning-05/v14/.suo
+.vs/config/applicationhost.config
+SC-IT-utbildning-05.sln
+SC-IT-utbildning-05.proj.DotSettings.user
